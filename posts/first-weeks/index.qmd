@@ -1,6 +1,22 @@
 ---
-title: "My first weeks in MDS"
+title: "My First Weeks in MDS"
 author: "Eshadhi"
 date: 2026-09-10
 ---
-![Orientation day on campus.](UBC.jpeg)
+![Commuting home from Campus](UBC.jpeg){width=550px}
+
+
+## First Week in MDS
+
+**Orientation**
+
+Orientation for MDS was a whirlwind of emotions. Lots of excitements and eager to meet my new classmates but also anxious about what the next 10 months will be like. The first day was a lot of information to take in but on the next day the scavenger hunt was a great way to explore the campus and get to know some classmates.
+
+**First Week of Class**
+
+First weeks of classes was tougher than I thought it would be but I also learned how to use the terminal which was really fun. I also did not expect the assignments to take as long as they did. What surprised me the most was how quickly I got used to being a student working full time right up to the start of orientation.
+
+**Current Thoughts**
+
+In week 2, I mostly think about what the next week will be like and try to finish my assignments soon so I have enough time to study as well.
+

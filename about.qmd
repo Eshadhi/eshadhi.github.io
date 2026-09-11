@@ -2,4 +2,11 @@
 title: "About"
 ---
 
-About this site
+## Background
+I grew up in Metro Vancouver and studied at Simon Fraser University, where I earned a Bachelor of Health Sciences with a concentration in Population Health and a minor in Computer and Electronic Design. Before starting the Master of Data Science (MDS) program at UBC, I worked at STEMCELL Technologies as a Learning Systems Analyst. What I loved about my job was to help support learning in a professional setting even after leaving school. 
+
+## Why Data Science
+My background in health sciences sparked my interest in the power of data and the insights it can provide. While I am particularly interested in applying data science to healthcare initiatives, planning and decision-making, I am also excited by its potential across a variety of industries. Through data science, I enjoy uncovering patterns, answering meaningful questions and discovering the stories that data can tell. I hope to use these skills to support data-driven solutions that create a positive impact. 
+
+## Outside of Data Science
+Outside of data science, you can usually find me with a book. I enjoy reading, staying active and spending quality time with friends and family. I also love to bake and decorate cakes.

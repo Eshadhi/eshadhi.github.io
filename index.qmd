@@ -1,11 +1,10 @@
 ---
-title: "website"
+title: "Eshadhi Bogoda"
 about:
   template: jolla
   image: images/image0.jpeg
 ---
 
-This is a Quarto website.
+I am currently a Master of Data Science (MDS) student at the University of British Columbia. Prior to joining the program, I worked as a Learning Systems Analyst at STEMCELL Technologies for nearly four years and I earned my Bachelor of Health Sciences from Simon Fraser University. Through the MDS program, I am developing technical data science skills to support a career transition into data focused roles. My goal is to apply data science and analytics to improve decision-making and outcomes in healthcare.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
