@@ -1,7 +1,11 @@
 ---
 title: "website"
+about:
+  template: jolla
+  image: images/image0.jpeg
 ---
 
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
