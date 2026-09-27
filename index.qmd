@@ -5,6 +5,6 @@ about:
   image: images/image0.jpeg
 ---
 
-I am currently a Master of Data Science (MDS) student at the University of British Columbia. Prior to joining the program, I worked as a Learning Systems Analyst at STEMCELL Technologies for nearly four years and I earned my Bachelor of Health Sciences from Simon Fraser University. Through the MDS program, I am developing technical data science skills to support a career transition into data focused roles. My goal is to apply data science and analytics to improve decision-making and outcomes in healthcare.
+I am currently a Master of Data Science (MDS) student at the University of British Columbia. Prior to joining the program, I worked as a Learning Systems Analyst at STEMCELL Technologies for nearly four years, where I supported learning technologies and developed an interest in using data to improve decision-making. I earned a Bachelor of Health Sciences with a minor in Computer and Electronic Design from Simon Fraser University. Through the MDS program, I am developing technical data science skills to support a career transition into data focused roles. I am interested in applying data science to solve problems across a variety of domains, particularly in healthcare where data driven insights can support better decision making and outcomes.
 
 
