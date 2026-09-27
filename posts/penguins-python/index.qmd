@@ -5,7 +5,7 @@ date: 2026-09-24
 ---
 <style>
 body {
-background-color: #ccdbf1c2;
+background-color: #e1dcedc2;
 }
 </style>
 
