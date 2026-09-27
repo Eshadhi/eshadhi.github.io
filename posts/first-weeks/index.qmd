@@ -4,7 +4,11 @@ author: "Eshadhi"
 date: 2026-09-10
 ---
 ![Commuting home from Campus](UBC.jpeg){width=550px}
-
+<style>
+body {
+background-color: #ccdbf1c2;
+}
+</style>
 
 ## First Week in MDS
 

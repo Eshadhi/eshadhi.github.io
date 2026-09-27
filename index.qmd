@@ -5,6 +5,20 @@ about:
   image: images/image0.jpeg
 ---
 
-I am currently a Master of Data Science (MDS) student at the University of British Columbia. Prior to joining the program, I worked as a Learning Systems Analyst at STEMCELL Technologies for nearly four years, where I supported learning technologies and developed an interest in using data to improve decision-making. I earned a Bachelor of Health Sciences with a minor in Computer and Electronic Design from Simon Fraser University. Through the MDS program, I am developing technical data science skills to support a career transition into data focused roles. I am interested in applying data science to solve problems across a variety of domains, particularly in healthcare where data driven insights can support better decision making and outcomes.
+<style>
+body {
+background-color:  #ccdbf1c2;
+}
+</style>
+
+<section class="hero">
+<p>MDS Student at UBC | Health Sciences Background | Data Science Enthusiast</p>
+</section>
+
+
+## Hi, I'm Eshadhi!
+
+I'm a Master of Data Science student at UBC with nearly four years of experience as a **Learning Systems Analyst** at **STEMCELL Technologies**. I earned a **Bachelor of Health Sciences** with a minor in **Computer and Electronic Design** from Simon Fraser University.
+I'm interested in using **data to solve problems** across a variety of domains, particularly in **healthcare**.
 
 

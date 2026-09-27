@@ -3,6 +3,11 @@ title: "My Python Palmer Penguin Analysis"
 author: "Eshadhi"
 date: 2026-09-24
 ---
+<style>
+body {
+background-color: #ccdbf1c2;
+}
+</style>
 
 ## Analysis on Palmer Penguins Data 
 I am investigating how flipper length varies among penguin species and between sexes, but this time I am doing this on python! 

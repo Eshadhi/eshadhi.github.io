@@ -16,7 +16,7 @@ The Python project uses uv to manage its packages. The required Python packages 
 
 ## Clone the repo
 
-In your terminal got to a folder of your choosing, clone the repo:
+In your terminal got to a folder of your choosing and clone the repo:
 
 git clone https://github.com/Eshadhi/eshadhi.github.io.git
 
@@ -26,15 +26,21 @@ cd eshadhi.github.io
 
 ## Setting up R and Python
 
-From inside your the top-level repository folder, run:
+From inside your the top-level repository folder, run the following commands one at a time:
 
 uv sync
 
+R 
+
 renv::restore()
+
+q()
+
+n
 
 ## Render Website
 
-To open the website locally, run the following commands from your top-level repository folder:
+To open the website locally, run the following commands (from your top-level repository folder which you should still be in):
 
 uv run quarto render
 

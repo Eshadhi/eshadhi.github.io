@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Eshadhi Bogoda",
     "section": "",
-    "text": "I am currently a Master of Data Science (MDS) student at the University of British Columbia. Prior to joining the program, I worked as a Learning Systems Analyst at STEMCELL Technologies for nearly four years and I earned my Bachelor of Health Sciences from Simon Fraser University. Through the MDS program, I am developing technical data science skills to support a career transition into data focused roles. My goal is to apply data science and analytics to improve decision-making and outcomes in healthcare."
+    "text": "MDS Student at UBC | Health Sciences Background | Data Science Enthusiast"
   },
   {
     "objectID": "posts/penguins-r/index.html",
@@ -49,6 +49,27 @@
     "text": "First Week in MDS\nOrientation\nOrientation for MDS was a whirlwind of emotions. Lots of excitements and eager to meet my new classmates but also anxious about what the next 10 months will be like. The first day was a lot of information to take in but on the next day the scavenger hunt was a great way to explore the campus and get to know some classmates.\nFirst Week of Class\nFirst weeks of classes was tougher than I thought it would be but I also learned how to use the terminal which was really fun. I also did not expect the assignments to take as long as they did. What surprised me the most was how quickly I got used to being a student working full time right up to the start of orientation.\nCurrent Thoughts\nIn week 2, I mostly think about what the next week will be like and try to finish my assignments soon so I have enough time to study as well."
   },
   {
+    "objectID": "posts/penguins-python/index.html",
+    "href": "posts/penguins-python/index.html",
+    "title": "My Python Palmer Penguin Analysis",
+    "section": "",
+    "text": "I am investigating how flipper length varies among penguin species and between sexes, but this time I am doing this on python!\nData: Palmer Penguins, Palmer Station Antarctica LTER.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom palmerpenguins import load_penguins\n\n\npenguins = load_penguins()\n\npenguins_cleaned = (\n    penguins\n    .dropna(subset=[\n        \"species\",\n        \"sex\",\n        \"bill_length_mm\",\n        \"flipper_length_mm\"\n    ])\n)\n\n\npenguins_summarised = (\n    penguins_cleaned\n    .groupby([\"species\", \"sex\"])\n    .agg(\n        mean_flipper_len=(\"flipper_length_mm\", \"mean\"),\n        mean_bill_len=(\"bill_length_mm\", \"mean\")\n    )\n    .reset_index()\n)\n\n\nsns.boxplot(\ndata=penguins_cleaned,\nx=\"species\",\ny=\"flipper_length_mm\",\nhue=\"sex\",\npalette=[\"#FF1493\",\"#C8A2C8\"],\norder=[\"Adelie\", \"Chinstrap\", \"Gentoo\"]\n)\n\nplt.xlabel(\"Species\")\nplt.ylabel(\"Flipper length (mm)\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Flipper length by penguin species and sex."
+  },
+  {
+    "objectID": "posts/penguins-python/index.html#analysis-on-palmer-penguins-data",
+    "href": "posts/penguins-python/index.html#analysis-on-palmer-penguins-data",
+    "title": "My Python Palmer Penguin Analysis",
+    "section": "",
+    "text": "I am investigating how flipper length varies among penguin species and between sexes, but this time I am doing this on python!\nData: Palmer Penguins, Palmer Station Antarctica LTER.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom palmerpenguins import load_penguins\n\n\npenguins = load_penguins()\n\npenguins_cleaned = (\n    penguins\n    .dropna(subset=[\n        \"species\",\n        \"sex\",\n        \"bill_length_mm\",\n        \"flipper_length_mm\"\n    ])\n)\n\n\npenguins_summarised = (\n    penguins_cleaned\n    .groupby([\"species\", \"sex\"])\n    .agg(\n        mean_flipper_len=(\"flipper_length_mm\", \"mean\"),\n        mean_bill_len=(\"bill_length_mm\", \"mean\")\n    )\n    .reset_index()\n)\n\n\nsns.boxplot(\ndata=penguins_cleaned,\nx=\"species\",\ny=\"flipper_length_mm\",\nhue=\"sex\",\npalette=[\"#FF1493\",\"#C8A2C8\"],\norder=[\"Adelie\", \"Chinstrap\", \"Gentoo\"]\n)\n\nplt.xlabel(\"Species\")\nplt.ylabel(\"Flipper length (mm)\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Flipper length by penguin species and sex."
+  },
+  {
+    "objectID": "posts/penguins-python/index.html#what-i-found",
+    "href": "posts/penguins-python/index.html#what-i-found",
+    "title": "My Python Palmer Penguin Analysis",
+    "section": "What I found",
+    "text": "What I found\nThe data shows that males have longer flipper lengths than the female of their speieces and that flipper length between species differs. With the boxplot we can clearly see the differences of the Gentoo penguins who have the longer flipper lengths than the other two species Adeille and Chinstrap."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -77,24 +98,10 @@
     "text": "Outside of Data Science\nOutside of data science, you can usually find me with a book. I enjoy reading, staying active and spending quality time with friends and family. I also love to bake and decorate cakes."
   },
   {
-    "objectID": "posts/penguins-python/index.html",
-    "href": "posts/penguins-python/index.html",
-    "title": "My Python Palmer Penguin Analysis",
-    "section": "",
-    "text": "I am investigating how flipper length varies among penguin species and between sexes, but this time I am doing this on python!\nData: Palmer Penguins, Palmer Station Antarctica LTER.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom palmerpenguins import load_penguins\n\n\npenguins = load_penguins()\n\npenguins_cleaned = (\n    penguins\n    .dropna(subset=[\n        \"species\",\n        \"sex\",\n        \"bill_length_mm\",\n        \"flipper_length_mm\"\n    ])\n)\n\n\npenguins_summarised = (\n    penguins_cleaned\n    .groupby([\"species\", \"sex\"])\n    .agg(\n        mean_flipper_len=(\"flipper_length_mm\", \"mean\"),\n        mean_bill_len=(\"bill_length_mm\", \"mean\")\n    )\n    .reset_index()\n)\n\n\nsns.boxplot(\ndata=penguins_cleaned,\nx=\"species\",\ny=\"flipper_length_mm\",\nhue=\"sex\",\npalette=[\"#FF1493\",\"#C8A2C8\"],\norder=[\"Adelie\", \"Chinstrap\", \"Gentoo\"]\n)\n\nplt.xlabel(\"Species\")\nplt.ylabel(\"Flipper length (mm)\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Flipper length by penguin species and sex."
-  },
-  {
-    "objectID": "posts/penguins-python/index.html#analysis-on-palmer-penguins-data",
-    "href": "posts/penguins-python/index.html#analysis-on-palmer-penguins-data",
-    "title": "My Python Palmer Penguin Analysis",
-    "section": "",
-    "text": "I am investigating how flipper length varies among penguin species and between sexes, but this time I am doing this on python!\nData: Palmer Penguins, Palmer Station Antarctica LTER.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom palmerpenguins import load_penguins\n\n\npenguins = load_penguins()\n\npenguins_cleaned = (\n    penguins\n    .dropna(subset=[\n        \"species\",\n        \"sex\",\n        \"bill_length_mm\",\n        \"flipper_length_mm\"\n    ])\n)\n\n\npenguins_summarised = (\n    penguins_cleaned\n    .groupby([\"species\", \"sex\"])\n    .agg(\n        mean_flipper_len=(\"flipper_length_mm\", \"mean\"),\n        mean_bill_len=(\"bill_length_mm\", \"mean\")\n    )\n    .reset_index()\n)\n\n\nsns.boxplot(\ndata=penguins_cleaned,\nx=\"species\",\ny=\"flipper_length_mm\",\nhue=\"sex\",\npalette=[\"#FF1493\",\"#C8A2C8\"],\norder=[\"Adelie\", \"Chinstrap\", \"Gentoo\"]\n)\n\nplt.xlabel(\"Species\")\nplt.ylabel(\"Flipper length (mm)\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Flipper length by penguin species and sex."
-  },
-  {
-    "objectID": "posts/penguins-python/index.html#what-i-found",
-    "href": "posts/penguins-python/index.html#what-i-found",
-    "title": "My Python Palmer Penguin Analysis",
-    "section": "What I found",
-    "text": "What I found\nThe data shows that males have longer flipper lengths than the female of their speieces and that flipper length between species differs. With the boxplot we can clearly see the differences of the Gentoo penguins who have the longer flipper lengths than the other two species Adeille and Chinstrap."
+    "objectID": "index.html#hi-im-eshadhi",
+    "href": "index.html#hi-im-eshadhi",
+    "title": "Eshadhi Bogoda",
+    "section": "Hi, I’m Eshadhi!",
+    "text": "Hi, I’m Eshadhi!\nI’m a Master of Data Science student at UBC with nearly four years of experience as a Learning Systems Analyst at STEMCELL Technologies. I earned a Bachelor of Health Sciences with a minor in Computer and Electronic Design from Simon Fraser University. I’m interested in using data to solve problems across a variety of domains, particularly in healthcare."
   }
 ]

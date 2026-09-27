@@ -3,6 +3,11 @@ title: "My R Palmer Penguin Analysis"
 author: "Eshadhi"
 date: 2026-09-24
 ---
+<style>
+body {
+background-color: #ccdbf1c2;
+}
+</style>
 
 ## Analysis on Palmer Penguins Data 
 I'm investigating how flipper length varies among penguin species and between sexes.
