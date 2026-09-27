@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "My First Weeks in MDS\n\n\n\n\n\n\n\n\nSep 10, 2026\n\n\nEshadhi\n\n\n\n\n\nNo matching items"
+    "text": "My R Palmer Penguin Analysis\n\n\n\n\n\n\n\n\nSep 24, 2026\n\n\nEshadhi\n\n\n\n\n\n\n\n\n\n\n\n\nMy Python Palmer Penguin Analysis\n\n\n\n\n\n\n\n\nSep 24, 2026\n\n\nEshadhi\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Weeks in MDS\n\n\n\n\n\n\n\n\nSep 10, 2026\n\n\nEshadhi\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -14,6 +14,27 @@
     "text": "I am currently a Master of Data Science (MDS) student at the University of British Columbia. Prior to joining the program, I worked as a Learning Systems Analyst at STEMCELL Technologies for nearly four years and I earned my Bachelor of Health Sciences from Simon Fraser University. Through the MDS program, I am developing technical data science skills to support a career transition into data focused roles. My goal is to apply data science and analytics to improve decision-making and outcomes in healthcare."
   },
   {
+    "objectID": "posts/penguins-r/index.html",
+    "href": "posts/penguins-r/index.html",
+    "title": "My R Palmer Penguin Analysis",
+    "section": "",
+    "text": "I’m investigating how flipper length varies among penguin species and between sexes.\nData: Palmer Penguins, Palmer Station Antarctica LTER.\n\nlibrary(palmerpenguins)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(tidyverse)\n\n\npenguins_cleaned &lt;- penguins |&gt;\n    drop_na(species, sex, bill_length_mm, flipper_length_mm) |&gt;\n    group_by(species, sex)\n\n\npenguins_summarised &lt;- penguins_cleaned   |&gt;\n    summarise(mean_flipper_len = mean(flipper_length_mm),\n             mean_bill_len = mean(bill_length_mm))\n\n\nggplot(\n  penguins_cleaned,\n  aes(x = species, y = flipper_length_mm, fill = sex)\n) +\n  geom_boxplot() +\n  labs(\n    x = \"Species\",\n    y = \"Flipper length (mm)\",\n    fill = \"Sex\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Flipper length by penguin species and sex."
+  },
+  {
+    "objectID": "posts/penguins-r/index.html#analysis-on-palmer-penguins-data",
+    "href": "posts/penguins-r/index.html#analysis-on-palmer-penguins-data",
+    "title": "My R Palmer Penguin Analysis",
+    "section": "",
+    "text": "I’m investigating how flipper length varies among penguin species and between sexes.\nData: Palmer Penguins, Palmer Station Antarctica LTER.\n\nlibrary(palmerpenguins)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(tidyverse)\n\n\npenguins_cleaned &lt;- penguins |&gt;\n    drop_na(species, sex, bill_length_mm, flipper_length_mm) |&gt;\n    group_by(species, sex)\n\n\npenguins_summarised &lt;- penguins_cleaned   |&gt;\n    summarise(mean_flipper_len = mean(flipper_length_mm),\n             mean_bill_len = mean(bill_length_mm))\n\n\nggplot(\n  penguins_cleaned,\n  aes(x = species, y = flipper_length_mm, fill = sex)\n) +\n  geom_boxplot() +\n  labs(\n    x = \"Species\",\n    y = \"Flipper length (mm)\",\n    fill = \"Sex\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Flipper length by penguin species and sex."
+  },
+  {
+    "objectID": "posts/penguins-r/index.html#what-i-found",
+    "href": "posts/penguins-r/index.html#what-i-found",
+    "title": "My R Palmer Penguin Analysis",
+    "section": "What I found",
+    "text": "What I found\nThe data shows that males have longer flipper lengths than the female of their speieces and that flipper length between species differs. With the boxplot we can clearly see the differences of the Gentoo penguins who have the longer flipper lengths than the other two species Adeille and Chinstrap."
+  },
+  {
     "objectID": "posts/first-weeks/index.html",
     "href": "posts/first-weeks/index.html",
     "title": "My First Weeks in MDS",
@@ -21,31 +42,59 @@
     "text": "Commuting home from Campus"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I grew up in Metro Vancouver and studied at Simon Fraser University, where I earned a Bachelor of Health Sciences with a concentration in Population Health and a minor in Computer and Electronic Design. Before starting the Master of Data Science (MDS) program at UBC, I worked at STEMCELL Technologies as a Learning Systems Analyst. What I loved about my job was to help support learning in a professional setting even after leaving school.\n\n\nMy background in health sciences sparked my interest in the power of data and the insights it can provide. While I am particularly interested in applying data science to healthcare initiatives, planning and decision-making, I am also excited by its potential across a variety of industries. Through data science, I enjoy uncovering patterns, answering meaningful questions and discovering the stories that data can tell. I hope to use these skills to support data-driven solutions that create a positive impact.\n\n\n\nOutside of data science, you can usually find me with a book. I enjoy reading, staying active and spending quality time with friends and family. I also love to bake and decorate cakes."
-  },
-  {
-    "objectID": "about.html#why-data-science",
-    "href": "about.html#why-data-science",
-    "title": "About",
-    "section": "",
-    "text": "My background in health sciences sparked my interest in the power of data and the insights it can provide. While I am particularly interested in applying data science to healthcare initiatives, planning and decision-making, I am also excited by its potential across a variety of industries. Through data science, I enjoy uncovering patterns, answering meaningful questions and discovering the stories that data can tell. I hope to use these skills to support data-driven solutions that create a positive impact."
-  },
-  {
-    "objectID": "about.html#outside-of-data-science",
-    "href": "about.html#outside-of-data-science",
-    "title": "About",
-    "section": "",
-    "text": "Outside of data science, you can usually find me with a book. I enjoy reading, staying active and spending quality time with friends and family. I also love to bake and decorate cakes."
-  },
-  {
     "objectID": "posts/first-weeks/index.html#first-week-in-mds",
     "href": "posts/first-weeks/index.html#first-week-in-mds",
     "title": "My First Weeks in MDS",
     "section": "First Week in MDS",
     "text": "First Week in MDS\nOrientation\nOrientation for MDS was a whirlwind of emotions. Lots of excitements and eager to meet my new classmates but also anxious about what the next 10 months will be like. The first day was a lot of information to take in but on the next day the scavenger hunt was a great way to explore the campus and get to know some classmates.\nFirst Week of Class\nFirst weeks of classes was tougher than I thought it would be but I also learned how to use the terminal which was really fun. I also did not expect the assignments to take as long as they did. What surprised me the most was how quickly I got used to being a student working full time right up to the start of orientation.\nCurrent Thoughts\nIn week 2, I mostly think about what the next week will be like and try to finish my assignments soon so I have enough time to study as well."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I grew up in Metro Vancouver and studied at Simon Fraser University, where I earned a Bachelor of Health Sciences with a concentration in Population Health and a minor in Computer and Electronic Design. Before starting the Master of Data Science (MDS) program at UBC, I worked at STEMCELL Technologies as a Learning Systems Analyst. What I loved about my job was to help support learning in a professional setting even after leaving school."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "",
+    "text": "I grew up in Metro Vancouver and studied at Simon Fraser University, where I earned a Bachelor of Health Sciences with a concentration in Population Health and a minor in Computer and Electronic Design. Before starting the Master of Data Science (MDS) program at UBC, I worked at STEMCELL Technologies as a Learning Systems Analyst. What I loved about my job was to help support learning in a professional setting even after leaving school."
+  },
+  {
+    "objectID": "about.html#why-data-science",
+    "href": "about.html#why-data-science",
+    "title": "About",
+    "section": "Why Data Science",
+    "text": "Why Data Science\nMy background in health sciences sparked my interest in the power of data and the insights it can provide. While I am particularly interested in applying data science to healthcare initiatives, planning and decision-making, I am also excited by its potential across a variety of industries. Through data science, I enjoy uncovering patterns, answering meaningful questions and discovering the stories that data can tell. I hope to use these skills to support data-driven solutions that create a positive impact."
+  },
+  {
+    "objectID": "about.html#outside-of-data-science",
+    "href": "about.html#outside-of-data-science",
+    "title": "About",
+    "section": "Outside of Data Science",
+    "text": "Outside of Data Science\nOutside of data science, you can usually find me with a book. I enjoy reading, staying active and spending quality time with friends and family. I also love to bake and decorate cakes."
+  },
+  {
+    "objectID": "posts/penguins-python/index.html",
+    "href": "posts/penguins-python/index.html",
+    "title": "My Python Palmer Penguin Analysis",
+    "section": "",
+    "text": "I am investigating how flipper length varies among penguin species and between sexes, but this time I am doing this on python!\nData: Palmer Penguins, Palmer Station Antarctica LTER.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom palmerpenguins import load_penguins\n\n\npenguins = load_penguins()\n\npenguins_cleaned = (\n    penguins\n    .dropna(subset=[\n        \"species\",\n        \"sex\",\n        \"bill_length_mm\",\n        \"flipper_length_mm\"\n    ])\n)\n\n\npenguins_summarised = (\n    penguins_cleaned\n    .groupby([\"species\", \"sex\"])\n    .agg(\n        mean_flipper_len=(\"flipper_length_mm\", \"mean\"),\n        mean_bill_len=(\"bill_length_mm\", \"mean\")\n    )\n    .reset_index()\n)\n\n\nsns.boxplot(\ndata=penguins_cleaned,\nx=\"species\",\ny=\"flipper_length_mm\",\nhue=\"sex\",\npalette=[\"#FF1493\",\"#C8A2C8\"],\norder=[\"Adelie\", \"Chinstrap\", \"Gentoo\"]\n)\n\nplt.xlabel(\"Species\")\nplt.ylabel(\"Flipper length (mm)\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Flipper length by penguin species and sex."
+  },
+  {
+    "objectID": "posts/penguins-python/index.html#analysis-on-palmer-penguins-data",
+    "href": "posts/penguins-python/index.html#analysis-on-palmer-penguins-data",
+    "title": "My Python Palmer Penguin Analysis",
+    "section": "",
+    "text": "I am investigating how flipper length varies among penguin species and between sexes, but this time I am doing this on python!\nData: Palmer Penguins, Palmer Station Antarctica LTER.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom palmerpenguins import load_penguins\n\n\npenguins = load_penguins()\n\npenguins_cleaned = (\n    penguins\n    .dropna(subset=[\n        \"species\",\n        \"sex\",\n        \"bill_length_mm\",\n        \"flipper_length_mm\"\n    ])\n)\n\n\npenguins_summarised = (\n    penguins_cleaned\n    .groupby([\"species\", \"sex\"])\n    .agg(\n        mean_flipper_len=(\"flipper_length_mm\", \"mean\"),\n        mean_bill_len=(\"bill_length_mm\", \"mean\")\n    )\n    .reset_index()\n)\n\n\nsns.boxplot(\ndata=penguins_cleaned,\nx=\"species\",\ny=\"flipper_length_mm\",\nhue=\"sex\",\npalette=[\"#FF1493\",\"#C8A2C8\"],\norder=[\"Adelie\", \"Chinstrap\", \"Gentoo\"]\n)\n\nplt.xlabel(\"Species\")\nplt.ylabel(\"Flipper length (mm)\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Flipper length by penguin species and sex."
+  },
+  {
+    "objectID": "posts/penguins-python/index.html#what-i-found",
+    "href": "posts/penguins-python/index.html#what-i-found",
+    "title": "My Python Palmer Penguin Analysis",
+    "section": "What I found",
+    "text": "What I found\nThe data shows that males have longer flipper lengths than the female of their speieces and that flipper length between species differs. With the boxplot we can clearly see the differences of the Gentoo penguins who have the longer flipper lengths than the other two species Adeille and Chinstrap."
   }
 ]

@@ -1,0 +1,66 @@
+---
+title: "My Python Palmer Penguin Analysis"
+author: "Eshadhi"
+date: 2026-09-24
+---
+
+## Analysis on Palmer Penguins Data 
+I am investigating how flipper length varies among penguin species and between sexes, but this time I am doing this on python! 
+
+Data: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/),
+Palmer Station Antarctica LTER.
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from palmerpenguins import load_penguins
+```
+
+
+```{python}
+penguins = load_penguins()
+
+penguins_cleaned = (
+    penguins
+    .dropna(subset=[
+        "species",
+        "sex",
+        "bill_length_mm",
+        "flipper_length_mm"
+    ])
+)
+```
+
+```{python}
+penguins_summarised = (
+    penguins_cleaned
+    .groupby(["species", "sex"])
+    .agg(
+        mean_flipper_len=("flipper_length_mm", "mean"),
+        mean_bill_len=("bill_length_mm", "mean")
+    )
+    .reset_index()
+)
+```
+
+```{python}
+#| label: fig-flipper-species-sex
+#| fig-cap: "Flipper length by penguin species and sex."
+
+sns.boxplot(
+data=penguins_cleaned,
+x="species",
+y="flipper_length_mm",
+hue="sex",
+palette=["#FF1493","#C8A2C8"],
+order=["Adelie", "Chinstrap", "Gentoo"]
+)
+
+plt.xlabel("Species")
+plt.ylabel("Flipper length (mm)")
+plt.show()
+```
+
+## What I found
+The data shows that males have longer flipper lengths than the female of their speieces and that flipper length between species differs. With the boxplot we can clearly see the differences of the Gentoo penguins who have the longer flipper lengths than the other two species Adeille and Chinstrap.

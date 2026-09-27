@@ -1,0 +1,61 @@
+---
+title: "My R Palmer Penguin Analysis"
+author: "Eshadhi"
+date: 2026-09-24
+---
+
+## Analysis on Palmer Penguins Data 
+I'm investigating how flipper length varies among penguin species and between sexes.
+
+Data: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/),
+Palmer Station Antarctica LTER.
+
+
+```{r}
+#| message: false
+#| warning: false
+
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+```
+
+
+
+```{r}
+penguins_cleaned <- penguins |>
+    drop_na(species, sex, bill_length_mm, flipper_length_mm) |>
+    group_by(species, sex)
+     
+```
+
+```{r}
+#| message: false
+#| warning: false
+penguins_summarised <- penguins_cleaned   |>
+    summarise(mean_flipper_len = mean(flipper_length_mm),
+             mean_bill_len = mean(bill_length_mm))
+
+```
+
+
+```{r}
+#| label: fig-flipper-species-sex
+#| fig-cap: "Flipper length by penguin species and sex."
+
+ggplot(
+  penguins_cleaned,
+  aes(x = species, y = flipper_length_mm, fill = sex)
+) +
+  geom_boxplot() +
+  labs(
+    x = "Species",
+    y = "Flipper length (mm)",
+    fill = "Sex"
+  ) +
+  theme_minimal()
+```
+
+## What I found
+The data shows that males have longer flipper lengths than the female of their speieces and that flipper length between species differs. With the boxplot we can clearly see the differences of the Gentoo penguins who have the longer flipper lengths than the other two species Adeille and Chinstrap.
